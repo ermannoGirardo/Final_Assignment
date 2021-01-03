@@ -5,3 +5,12 @@ Inside Final_assignment you will find: -rqt_graph of the simulation -CMakeList.t
 Robot uses lasers to scanning the area and for seeing obstacles. Robot uses SLAM ( Simultaneous Localization and Mapping) in particular Gmapping, which is based on a particle filter (approach to estimate a probability density). Robot uses dijkstra algorithm to move in the sourrounding environment. With simulation_gmapping.launch Rviz and Gazebo simulators will be executed. With move_base.launch dijkstra algorithm will be executed.
 
 I develop (/src/interface.cpp) that allow to choose one of four possiible actions: 1)Choose randomly one of six possible target and Robot has to reach the goal. A custom service has been declared (srv/Random_Goal.srv) and one server to choose randomomly the goal has been implemented(/src/goal_service.cpp) 2)User has to set x and y coordinates for the goal (but one of the possible six) 3)Start to follow the walls. For this scope exits (/scripts/wall_follow_service_m.py) 4)Stop the Robot in the current position.
+
+
+To launch the node digit the command:
+1) roslaunch final_assignment my_launch_file1.launch that launch the simulators ---> Gazebo and Rviz , the Gmapping Algorithm to estalibish the correct position of the Robot
+         This launch file execute also the Djikstra Algorithm to estailish the shortest path to reach the target
+2) roslaunch final_assignment my_launch_file2.launch that executes the two nodes in C++ --> the first:goal_server that provides a random target betweeen the possibles coordinates:
+
+X_COORDINATES:[]
+Y_COORDINATES:[]
