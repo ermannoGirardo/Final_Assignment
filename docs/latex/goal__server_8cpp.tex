@@ -1,0 +1,61 @@
+\hypertarget{goal__server_8cpp}{}\section{goal\+\_\+server.\+cpp File Reference}
+\label{goal__server_8cpp}\index{goal\+\_\+server.\+cpp@{goal\+\_\+server.\+cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}final\+\_\+assignment/\+Random\+\_\+\+Goal.\+h\char`\"{}}\\*
+Include dependency graph for goal\+\_\+server.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{goal__server_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{goal__server_8cpp_a1a6af37b07c0c4027195bd55680c687b}{target\+\_\+pos} (final\+\_\+assignment\+::\+Random\+\_\+\+Goal\+::\+Request \&req, final\+\_\+assignment\+::\+Random\+\_\+\+Goal\+::\+Response \&res)
+\item 
+int \hyperlink{goal__server_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{goal\+\_\+server.\+cpp@{goal\+\_\+server.\+cpp}!main@{main}}
+\index{main@{main}!goal\+\_\+server.\+cpp@{goal\+\_\+server.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{goal__server_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{goal__server_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+/\+Main function\+:
+
+/\+Parameters\+:
+
+int argc, char $\ast$$\ast$argv are mandatory for cpp files
+
+/\+Comments about the code\+:
+
+ros\+::init--$>$initialisation of the node position\+\_\+server
+
+ros\+::\+Node\+Handle n --$>$ set-\/up node\+Handle
+
+ros\+::\+Service\+Server service= n.\+advertise\+Service(\char`\"{}robot/random\+\_\+target\char`\"{},target\+\_\+pos); --$>$ define server and specify function call\+Back
+
+ros\+::spin()--$>$ blocks the main thread from exiting until R\+OS invokes a shutdown (for example Ctrl+C) \index{goal\+\_\+server.\+cpp@{goal\+\_\+server.\+cpp}!target\+\_\+pos@{target\+\_\+pos}}
+\index{target\+\_\+pos@{target\+\_\+pos}!goal\+\_\+server.\+cpp@{goal\+\_\+server.\+cpp}}
+\subsubsection[{\texorpdfstring{target\+\_\+pos(final\+\_\+assignment\+::\+Random\+\_\+\+Goal\+::\+Request \&req, final\+\_\+assignment\+::\+Random\+\_\+\+Goal\+::\+Response \&res)}{target_pos(final_assignment::Random_Goal::Request &req, final_assignment::Random_Goal::Response &res)}}]{\setlength{\rightskip}{0pt plus 5cm}bool target\+\_\+pos (
+\begin{DoxyParamCaption}
+\item[{final\+\_\+assignment\+::\+Random\+\_\+\+Goal\+::\+Request \&}]{req, }
+\item[{final\+\_\+assignment\+::\+Random\+\_\+\+Goal\+::\+Response \&}]{res}
+\end{DoxyParamCaption}
+)}\hypertarget{goal__server_8cpp_a1a6af37b07c0c4027195bd55680c687b}{}\label{goal__server_8cpp_a1a6af37b07c0c4027195bd55680c687b}
+/\+Function call\+Back executed when client calls
+
+/\+Parameters\+: an instance for the request(not used) and an instance for the reply of the srv Random\+\_\+\+Goal.\+srv
+
+/\+Comments about the code\+: \begin{DoxyVerb}        Generate a random number and indices the array of coordinates
+
+        Set the response of the service with the coordinates
+
+        ROS_INFO --> print on screen string between ""\end{DoxyVerb}
+ 

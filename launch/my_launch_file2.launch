@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>	
+	<node pkg="final_assignment" type="wall_follow_service_m.py" name="wall_follower" />
+	<node pkg="final_assignment" type="goal_server" name="goal_server" />
+	<node pkg="final_assignment" type="interface" name="interface" output="screen"/>
+</launch>
+
