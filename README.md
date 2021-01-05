@@ -10,7 +10,7 @@ Inside Final_assignment you will find:
 -src folder with c++ file of the two nodes:
                   1) Goal_server.cpp that provide a random target betweeen the possibles coordinates: X_COORDINATES:[-4,-4,-4, 5, 5,5]
                                                                                                       Y_COORDINATES:[-3, 2, 7,-7,-3,1]
-                  2) Interface.cpp ,a simply user interface ,that provide the four possible function.
+                  2) Interface.cpp ,a simply user interface ,that provide the four possible functions.
 
 -srv folder with the request/reply of the custom service 
 -config folder for rviz configuration 
