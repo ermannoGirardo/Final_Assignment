@@ -22,7 +22,7 @@ Inside Final_assignment you will find:
 
 Robot uses lasers to scanning the area and for seeing obstacles. Robot uses SLAM ( Simultaneous Localization and Mapping) in particular Gmapping, which is based on a particle filter (approach to estimate a probability density). Robot uses Dijkstra algorithm to move in the sourrounding environment. With simulation_gmapping.launch Rviz and Gazebo simulators will be executed. With move_base.launch dijkstra algorithm will be executed.
 
-I develop (/src/interface.cpp) that allow to choose one of four possiible actions: 1)Choose randomly one of six possible target and Robot has to reach the goal. A custom service has been declared (srv/Random_Goal.srv) and one server to choose randomomly the goal has been implemented(/src/goal_service.cpp) 2)User has to set x and y coordinates for the goal (but one of the possible six) 3)Start to follow the walls. For this scope exits (/scripts/wall_follow_service_m.py) 4)Stop the Robot in the current position.
+I develop (/src/interface.cpp) that allow to choose one of four possiible actions: 1)Choose randomly one of six possible target and Robot has to reach the goal. A custom service has been declared (srv/Random_Goal.srv) and one server to choose randomomly the goal has been implemented(/src/goal_service.cpp) 2)User has to set x and y coordinates for the goal (but one of the possible six) 3)Start to follow the walls. For this scope exists (/scripts/wall_follow_service_m.py) 4)Stop the Robot in the current position.
 
 
 To launch the node digit the command:
